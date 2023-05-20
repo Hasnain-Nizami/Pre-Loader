@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.main{
+   position: relative;
+   width: 100%;
+   min-height: 100vh;
+   display: grid;
+   place-content: center;
+   background-color: rgba(0, 0, 0, 0.5);
+}
+.backVideo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2
+}
+.btn{
+    position: absolute;
+    background: transparent;
+    bottom: 50px;
+    left: 50px;
+    padding: 10px;
+    width: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    border-radius: 30px;
+    cursor: pointer;
+    border: 3px solid #666;
+    font-size: 14px;
+}
+h1{
+    font-size: 6rem;
+    letter-spacing: 4px;
+    -webkit-text-stroke: 2px #fff;
+	-webkit-text-fill-color: transparent;
+}
+.btncircle{
+    position: absolute;
+    background-color: rgb(72, 66, 66);
+    width: 55%;
+    height: 100%;
+    border-radius: inherit;
+    border: 2px solid #fff;
+    right: 0;
+    transition: 0.5s ease;
+}
+.btn.show .btncircle{
+    transform: translateX(-82%);
+}
+.spincontainer{
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+    background-color: rgb(241, 242, 243);
+}
+
+@media only screen and (max-width: 623px){
+    h1{
+        font-size: 4rem;
+    }
+    .btn{
+        bottom: 35px;
+        left: 30px
+    }
+}
+
+@media only screen and (max-width: 500px){
+    h1{
+        font-size: 3.5rem;
+    }
+}
+
+@media only screen and (max-width: 430px){
+    h1{
+        font-size: 3rem;
+        -webkit-text-stroke: 1px #fff;
+    }
+    .btn{
+        padding: 9px;
+    }
+}
+@media only screen and (max-width: 336px){
+    h1{
+        font-size: 2.5rem;
+    }
+}

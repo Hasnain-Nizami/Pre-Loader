@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="spincontainer">
+        <img src="./Spinner-1s-200px.gif" alt="loading..">
+    </div>
+    <div class="main">
+        <video class="backVideo" autoplay  loop muted >
+            <source src="./video.mp4" type="video/mp4">
+        </video>
+        <h1>Video Player</h1>
+        <div class="btn" onclick="btn()">
+            <span>Pause</span>
+            <span>Play</span>
+            <span class="btncircle"></span>
+        </div>
+    </div>
+</body>
+<script>
+    function btn(){
+    var btn = document.querySelector(".btn")
+    var video = document.querySelector(".backVideo")
+    btn.classList.toggle("show")
+    if(btn.className == "btn show"){
+        video.pause()
+    }else{
+        video.play()
+     }
+}
+window.addEventListener('load',()=>{
+    var loader = document.querySelector(".spincontainer")
+    loader.style.display = "none" 
+
+})
+</script>
+
+</html>
